@@ -21,7 +21,8 @@
       </v-card-text>
 
       <v-card-text class="white--text pt-0">
-        Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet. Mauris cursus commodo interdum. Praesent ut risus eget metus luctus accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim a sit amet dui. Duis commodo vitae velit et faucibus. Morbi vehicula lacinia malesuada. Nulla placerat augue vel ipsum ultrices, cursus iaculis dui sollicitudin. Vestibulum eu ipsum vel diam elementum tempor vel ut orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        <h3>Contact us on:</h3> <div class="info-group"><i class="fas fa-envelope"></i> Company@mail.com</div> <div class="info-group"><i class="fas fa-phone"></i> 00962700000000 </div>
+        <h3>Find us:</h3> <div class="info-group"><i class="fas fa-map-marker-alt"></i> Jordan,Amman </div>
       </v-card-text>
 
       <v-divider></v-divider>
@@ -50,6 +51,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.v-sheet.v-card:not(.v-sheet--outlined){
+  width: 100%;
+}
 .theme--light.v-card>.v-card__text {
     background-color: #682c0e;
     color: white;
@@ -57,5 +61,16 @@ export default {
 }
 .theme--light.v-btn.v-btn--icon{
         color: white !important;
+    }
+    .pt-0{
+      font-size: 1.3rem !important;
+      display: flex;
+      justify-content: center;
+      .info-group{
+        margin: 0 40px;
+      }
+    }
+    .white--text{
+      font-size: 1.1rem;
     }
 </style>

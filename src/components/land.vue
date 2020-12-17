@@ -51,37 +51,14 @@
     <div id="clients">
       <h1><i class="fas fa-users"></i> Our Clients</h1>
       <div class="clients">
-      <v-col
-        v-for="(client,index) in clients"
-        :key="index"
-      >
-       <v-card
-    class="mx-auto"
-  >
-    <v-img
-      class="white--text align-end"
-      height="200px"
-      :src="client.profile"
-    >
-    </v-img>
-
-    <v-card-subtitle class="pb-0">
-     <h2>{{client.name}}</h2>
-     <h2>{{client.jobTitle}}</h2>
-    </v-card-subtitle>
-
-    <v-card-text class="text--primary">
-      <div><h4><q>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-          when an unknown printer took a galley of type and scrambled it to make a type specimen book.</q></h4></div>
-    </v-card-text>
-
-    <v-card-actions>
-        <i class="fab fa-linkedin fa-lg"></i>
-        <i class="fab fa-twitter-square fa-lg"></i>
-    </v-card-actions>
-  </v-card>
-      </v-col>
+     <div class="card" v-for="(client,index) in clients" :key="index">
+       <img :src="client.profile" alt="">
+       <div class="card-text">
+         <h4>{{client.name}}</h4> <h4>{{client.jobTitle}}</h4>
+         <p><q> Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. </q></p>
+       </div>
+     </div>
       </div>
     </div>
 
@@ -176,7 +153,7 @@ p{
 #services{
    margin: 100px 10%;
    padding: 50px 0;
-   border-top: 2px solid #fc8621;
+   border-top: 3px solid #fc8621;
    color: white;
    position: relative;
    h1{
@@ -223,7 +200,7 @@ p{
 #clients{
   margin: 100px 10%;
   padding: 50px 0;
-  border-top: 2px solid #fc8621;
+  border-top: 3px solid #fc8621;
   h1{
      color: white;
      font-size: 2.5rem;
@@ -234,32 +211,26 @@ p{
     justify-content: space-between;
     gap: 50px;
     padding: 50px 0;
-    .col{
-      padding: 0;
+    .card{
+      display: flex;
+      flex-direction: column;
+    img{
+      height: 50%;
+      width: 100%;
     }
-    .v-card{
-      h4{
-        font-size: 1.2rem;
-      }
-      .v-card__subtitle{
-        display: flex;
-        justify-content: space-between;
-      h2{
-        color: black;
-        text-align: left;
-      }
-      }
-      .fab{
-        margin: 0 5px;
-        color: #fc8621;
-      }
+    .card-text{
+      height: 50%;
+      color: rgb(85, 85, 85);
+      background-color: white;
+      padding: 10px;
+    }
     }
   }
 }
 #about-us{
   margin: 100px 10%;
   padding: 50px 0;
-  border-top: 2px solid #fc8621;
+  border-top: 3px solid #fc8621;
    h1{
      color: white;
      font-size: 2.5rem;
