@@ -111,6 +111,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.fas{
+  color: #f9813a;
+}
 #head {
   height: 100vh;
   background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../assets/company.jpg');
@@ -137,7 +140,7 @@ export default {
       font-size: 1.3rem;
     }
     .v-btn{
-      background-color: #c24914;
+      background-color: #f9813a;
       color: white;
     }
   }
@@ -147,14 +150,14 @@ p{
   font-size: 1.4rem;
 }
 .fa-long-arrow-alt-down{
-  color: #fc8621;
+  color: #f9813a;
 }
 }
 #services{
    margin: 100px 10%;
    padding: 50px 0;
-   border-top: 3px solid #fc8621;
-   color: white;
+   border-top: 3px solid #f9813a;
+   color: var(--font-color);
    position: relative;
    h1{
      font-size: 2.5rem;
@@ -164,10 +167,10 @@ p{
      font-size: 1.2rem;
    }
    .fa-arrow-right{
-     color: #fc8621;
+     color: #f9813a;
    }
    a{
-     color:white;
+     color:var(--font-color);
      font-size: 1.3rem;
      right:  0;
      position: absolute;
@@ -200,9 +203,9 @@ p{
 #clients{
   margin: 100px 10%;
   padding: 50px 0;
-  border-top: 3px solid #fc8621;
+  border-top: 3px solid #f9813a;
   h1{
-     color: white;
+     color: var(--font-color);
      font-size: 2.5rem;
   }
   .clients{
@@ -220,8 +223,8 @@ p{
     }
     .card-text{
       height: 50%;
-      color: rgb(85, 85, 85);
-      background-color: white;
+      color: var(--background-color);
+      background-color: var(--card-color);
       padding: 10px;
     }
     }
@@ -230,9 +233,9 @@ p{
 #about-us{
   margin: 100px 10%;
   padding: 50px 0;
-  border-top: 3px solid #fc8621;
+  border-top: 3px solid #f9813a;
    h1{
-     color: white;
+     color: var(--font-color);
      font-size: 2.5rem;
      letter-spacing: 0.2rem;
      width: auto;
@@ -253,23 +256,23 @@ p{
       flex-direction: column;
       justify-content: space-around;
      p{
-    color: white;
+    color: var(--font-color);
     font-size: 1.2rem;
     }
     .fa-arrow-right{
-     color: #fc8621;
+     color: #f9813a;
    }
    a{
-     color:white;
+     color:var(--font-color);
      font-size: 1.3rem;
    }
     }
   }
 }
 .backTop{
-    color: #fc8621;
+    color: #f9813a;
     position: fixed;
-    left: 10px;
+    right: 30px;
     bottom: 50px;
     z-index: 100;
     display: none;

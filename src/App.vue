@@ -3,6 +3,14 @@
     <router-view/>
   </div>
 </template>
+<script>
+export default {
+  data () {
+    return {
+    }
+  }
+}
+</script>
 
 <style lang="scss">
 html,body{
@@ -12,7 +20,7 @@ html,body{
   font-family: 'Bebas Neue', cursive;
 font-family: 'Saira Condensed', sans-serif;
   text-align: center;
-  background-color: #682c0e;
+   background-color: var(--background-color);
   box-sizing: border-box;
 }
 

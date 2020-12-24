@@ -21,7 +21,7 @@
       </v-card-text>
 
       <v-card-text class="white--text pt-0">
-        <h3>Contact us on:</h3> <div class="info-group"><i class="fas fa-envelope"></i> Company@mail.com</div> <div class="info-group"><i class="fas fa-phone"></i> 00962700000000 </div>
+        <h3>Contact us :</h3> <div class="info-group"><i class="fas fa-envelope"></i> Company@mail.com</div> <div class="info-group"><i class="fas fa-phone"></i> 00962700000000 </div>
         <h3>Find us:</h3> <div class="info-group"><i class="fas fa-map-marker-alt"></i> Jordan,Amman </div>
       </v-card-text>
 
@@ -51,11 +51,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.fas{
+  color: #f9813a;
+}
 .v-sheet.v-card:not(.v-sheet--outlined){
   width: 100%;
 }
 .theme--light.v-card>.v-card__text {
-    background-color: #682c0e;
+    background-color: #1a1c20;
     color: white;
     padding:20px 5%;
 }

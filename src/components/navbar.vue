@@ -1,9 +1,11 @@
 <template>
 <div>
    <div class="nav">
+     <div class="nav-menu">
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
-
       <v-toolbar-title>Menu</v-toolbar-title>
+      </div>
+      <i class="fas fa-lightbulb" @click="changeTheme"></i>
     </div>
 
     <v-navigation-drawer
@@ -64,8 +66,41 @@ export default {
   name: 'navbar',
   data: () => ({
     drawer: false,
-    group: null
-  })
+    group: null,
+    darkMode: true
+  }),
+  methods: {
+    changeTheme () {
+      this.darkMode = !this.darkMode
+    }
+  },
+  watch: {
+    darkMode: function () {
+      // add/remove class to/from html tag
+      const htmlElement = document.documentElement
+
+      if (this.darkMode) {
+        localStorage.setItem('theme', 'dark')
+        htmlElement.setAttribute('theme', 'dark')
+      } else {
+        localStorage.setItem('theme', 'light')
+        htmlElement.setAttribute('theme', 'light')
+      }
+    }
+  },
+  mounted () {
+    // check for active theme
+    const htmlElement = document.documentElement
+    const theme = localStorage.getItem('theme')
+
+    if (theme === 'dark') {
+      htmlElement.setAttribute('theme', 'dark')
+      this.darkMode = true
+    } else {
+      htmlElement.setAttribute('theme', 'light')
+      this.darkMode = false
+    }
+  }
 }
 </script>
 
@@ -74,20 +109,31 @@ export default {
 .nav{
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 10px 20px;
   color:white;
   position: absolute;
   width: 100%;
   z-index: 6;
+  .nav-menu{
+    display: flex;
+    align-items: center;
+  }
+  .fas{
+    color: var(--lamp-color);
+    cursor: pointer;
+  }
   .v-btn--outlined .v-btn__content .v-icon, .v-btn--round .v-btn__content .v-icon{
     color: white;
   }
 }
+.v-navigation-drawer__content{
+  background-color: var(--background-color);
+}
 .v-list--dense{
 .v-icon.v-icon{
-  color: #c24914 !important;
+  color: #f9813a !important;
 }
 }
 .v-list-item{
@@ -95,5 +141,6 @@ export default {
 }
 .v-list-item__title{
   font-size: 1.2rem !important;
+  color: var(--font-color);
 }
 </style>
