@@ -5,7 +5,7 @@
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
       <v-toolbar-title>Menu</v-toolbar-title>
       </div>
-      <i class="fas fa-lightbulb fa-2x" @click="changeTheme"></i>
+      <i class="fas fa-lightbulb fa-lg" @click="changeTheme"></i>
     </div>
 
     <v-navigation-drawer
