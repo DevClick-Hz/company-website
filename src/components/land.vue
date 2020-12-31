@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="cont">
    <div id="head">
      <div class="head">
       <div class="head-text">
@@ -44,7 +44,7 @@
     </div>
   </v-card>
   </div>
-  <a href="#">Know more <i class="fas fa-arrow-right fa-xs"></i></a>
+  <router-link to="/services">Know more <i class="fas fa-arrow-right fa-xs"></i></router-link>
     </div>
 
     <!----------------------------------------clients------------------------------------------->
@@ -170,7 +170,7 @@ p{
      color: #f9813a;
    }
    a{
-     color:var(--font-color);
+     color: #f9813a;
      font-size: 1.3rem;
      right:  0;
      position: absolute;
@@ -212,7 +212,7 @@ p{
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(250px,300px));
     justify-content: space-between;
-    gap: 50px;
+    gap: 100px;
     padding: 50px 0;
     .card{
       display: flex;
@@ -220,6 +220,7 @@ p{
     img{
       height: 50%;
       width: 100%;
+      object-fit: cover;
     }
     .card-text{
       height: 50%;
@@ -263,7 +264,7 @@ p{
      color: #f9813a;
    }
    a{
-     color:var(--font-color);
+     color:#f9813a;
      font-size: 1.3rem;
    }
     }

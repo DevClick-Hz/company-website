@@ -66,8 +66,9 @@ export default {
         color: white !important;
     }
     .pt-0{
-      font-size: 1.3rem !important;
+      font-size: 1.2rem !important;
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       .info-group{
         margin: 0 40px;
@@ -75,5 +76,13 @@ export default {
     }
     .white--text{
       font-size: 1.1rem;
+    }
+    @media only screen and (max-width: 576px) {
+      .white--text{
+        display: inline-block;
+      }
+       .info-group{
+         margin: 5px 0 !important;
+       }
     }
 </style>

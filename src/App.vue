@@ -1,13 +1,17 @@
 <template>
   <div id="app">
-    <router-view/>
+    <transition name="fade" mode="out-in">
+     <router-view/>
+    </transition>
+    <foot/>
   </div>
 </template>
 <script>
+import foot from "./components/foot"
 export default {
-  data () {
-    return {
-    }
+  name: 'app',
+  components: {
+    foot
   }
 }
 </script>
@@ -18,10 +22,19 @@ html,body{
 }
 #app {
   font-family: 'Bebas Neue', cursive;
-font-family: 'Saira Condensed', sans-serif;
+  font-family: 'Saira Condensed', sans-serif;
   text-align: center;
-   background-color: var(--background-color);
+  background-color: var(--background-color);
   box-sizing: border-box;
+  width: 100vw;
+  overflow: hidden;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+  transform: translateX(2em);
+}
+.fade-enter-active, .fade-leave-active{
+  transition: all .5s ease;
 }
 
 </style>

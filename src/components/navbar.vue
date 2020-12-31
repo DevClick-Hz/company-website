@@ -44,16 +44,16 @@
 
           <v-list-item>
             <v-list-item-icon>
-              <v-icon>mdi-email</v-icon>
+              <v-icon>mdi-office-building</v-icon>
             </v-list-item-icon>
-            <v-list-item-title>Contact us</v-list-item-title>
+            <v-list-item-title>About us</v-list-item-title>
           </v-list-item>
 
           <v-list-item>
             <v-list-item-icon>
-              <v-icon>mdi-office-building</v-icon>
+              <v-icon>mdi-email</v-icon>
             </v-list-item-icon>
-            <v-list-item-title>About us</v-list-item-title>
+            <v-list-item-title>Contact us</v-list-item-title>
           </v-list-item>
         </v-list-item-group>
       </v-list>
@@ -125,7 +125,7 @@ export default {
     cursor: pointer;
   }
   .v-btn--outlined .v-btn__content .v-icon, .v-btn--round .v-btn__content .v-icon{
-    color: white;
+    color: white !important;
   }
 }
 .v-navigation-drawer__content{
