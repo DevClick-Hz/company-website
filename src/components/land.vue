@@ -90,9 +90,9 @@ export default {
   data () {
     return {
       clients: [
-        { name: 'Jack Willson', jobTitle: 'CEO at X company', profile: require('../assets/CEO1.jpg') },
-        { name: 'Hannah Billy', jobTitle: 'CEO at Y company', profile: require('../assets/CEO2.jpg') },
-        { name: 'James Gary', jobTitle: 'CEO at Z company', profile: require('../assets/CEO3.jpg') }
+        { name: 'Jack Willson', jobTitle: 'CEO at X company'},
+        { name: 'Hannah Billy', jobTitle: 'CEO at Y company'},
+        { name: 'James Gary', jobTitle: 'CEO at Z company'}
       ]
     }
   },
