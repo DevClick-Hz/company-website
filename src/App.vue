@@ -28,6 +28,7 @@ html,body{
   box-sizing: border-box;
   width: 100vw;
   overflow: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 .fade-enter, .fade-leave-to {
   opacity: 0;
