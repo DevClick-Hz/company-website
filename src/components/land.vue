@@ -52,7 +52,6 @@
       <h1><i class="fas fa-users"></i> Our Clients</h1>
       <div class="clients">
      <div class="card" v-for="(client,index) in clients" :key="index">
-       <img :src="client.profile" alt="">
        <div class="card-text">
          <h4>{{client.name}}</h4> <h4>{{client.jobTitle}}</h4>
          <p><q> Lorem Ipsum is simply dummy text of the printing and typesetting industry.
