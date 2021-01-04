@@ -1,4 +1,4 @@
-# company_website
+# company
 
 ## Project setup
 ```

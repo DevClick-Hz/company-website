@@ -1,88 +1,52 @@
 <template>
-  <v-footer
-    padless
-  >
-    <v-card
-      flat
-      tile
-      class="indigo lighten-1 white--text text-center"
-    >
-      <v-card-text>
-        <v-btn
-          v-for="icon in icons"
-          :key="icon"
-          class="mx-4 white--text"
-          icon
-        >
-          <v-icon size="24px">
-            {{ icon }}
-          </v-icon>
-        </v-btn>
-      </v-card-text>
-
-      <v-card-text class="white--text pt-0">
-        <h3>Contact us :</h3> <div class="info-group"><i class="fas fa-envelope"></i> Company@mail.com</div> <div class="info-group"><i class="fas fa-phone"></i> 00962700000000 </div>
-        <h3>Find us:</h3> <div class="info-group"><i class="fas fa-map-marker-alt"></i> Jordan,Amman </div>
-      </v-card-text>
-
-      <v-divider></v-divider>
-
-      <v-card-text class="white--text">
-        {{ new Date().getFullYear() }} — <strong>Company</strong>
-      </v-card-text>
-    </v-card>
-  </v-footer>
+    <div class="footer">
+        <div class="group">
+            <h4>Contact us</h4>
+            <p><i class="fas fa-envelope fa-lg"></i> Info@company.com</p>
+            <p><i class="fas fa-phone-volume fa-lg"></i> 009626000000</p>
+        </div>
+        <div class="group">
+            <h4>Links</h4>
+            <router-link to=""><p>Career</p></router-link>
+            <router-link to=""><p>Privacy policy</p></router-link>
+        </div>
+        <div class="group">
+            <h4>Visit us</h4>
+            <i class="fas fa-map-marker-alt"></i>
+            <p>Amman,Jordan</p>
+            <p>2020 &copy; Company</p>
+        </div>
+    </div>
 </template>
-
+ 
 <script>
 export default {
-  name: 'foot',
-  data () {
-    return {
-      icons: [
-        'mdi-facebook',
-        'mdi-twitter',
-        'mdi-linkedin',
-        'mdi-instagram'
-      ]
-    }
-  }
+    name: 'foot'
 }
 </script>
-
 <style lang="scss" scoped>
-.fas{
-  color: #f9813a;
+.footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 20px;
+    .group{
+        flex: 1 1 0px;
+        color: var(--font-color);
+        h4{
+            border-bottom: 1px solid #f9813a;
+        }
+        .fas{
+            color: #f9813a;
+        }
+        a{
+          color: var(--font-color); 
+          width: auto;
+          &:hover{
+              color: #f9813a;
+          } 
+        }
+    }
 }
-.v-sheet.v-card:not(.v-sheet--outlined){
-  width: 100%;
-}
-.theme--light.v-card>.v-card__text {
-    background-color: #1a1c20;
-    color: white;
-    padding:20px 5%;
-}
-.theme--light.v-btn.v-btn--icon{
-        color: white !important;
-    }
-    .pt-0{
-      font-size: 1.2rem !important;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      .info-group{
-        margin: 0 40px;
-      }
-    }
-    .white--text{
-      font-size: 1.1rem;
-    }
-    @media only screen and (max-width: 576px) {
-      .white--text{
-        display: inline-block;
-      }
-       .info-group{
-         margin: 5px 0 !important;
-       }
-    }
 </style>
