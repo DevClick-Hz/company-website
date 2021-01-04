@@ -1,5 +1,6 @@
 <template>
   <div class="cont">
+    <navbar/>
    <div id="head">
      <div class="head">
       <div class="head-text">
@@ -96,10 +97,10 @@
 
 <script>
 import foot from '../components/foot'
-
+import navbar from '../components/navbar'
 export default {
   name: 'Home',
-  components:{foot},
+  components:{foot,navbar},
   data () {
     return {
       clients: [

@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <navbar/>
      <transition name="fade" mode="out-in">
      <router-view/>
     </transition>
@@ -8,9 +7,7 @@
 </template>
 
 <script>
-import navbar from '../src/components/navbar'
 export default {
-  components: {navbar}
 }
 </script>
 
