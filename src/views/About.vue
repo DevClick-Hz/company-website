@@ -88,6 +88,7 @@ mounted(){
       margin: 50px auto;
       padding: 50px 0;
       display: flex;
+      flex-wrap: wrap;
       .text{
         text-align: left;
         font-size: 1.3rem;
@@ -115,8 +116,10 @@ mounted(){
       margin: 50px auto;
       padding: 50px 0;
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       .counter{
+        flex: 1 1 0px;
         h2{
         color: #f9813a;
         }
@@ -163,5 +166,23 @@ mounted(){
           }
       }
     }
+}
+@media only screen and (max-width: 576px){
+  .mission{
+         .itm{
+            flex: 1 2 0px;
+          }
+          p{
+            width: 80% !important;
+            margin: 40px auto;
+            .fas{
+            color: #f9813a;
+          }
+          }
+      }
+  .fa-long-arrow-alt-left{
+    position: relative !important;
+    left: 0 !important;
+}
 }
 </style>
