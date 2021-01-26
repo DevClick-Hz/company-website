@@ -12,8 +12,7 @@
         </div>
         <div class="group">
             <h4>Visit us</h4>
-            <i class="fas fa-map-marker-alt"></i>
-            <p>Amman,Jordan</p>
+            <p><i class="fas fa-map-marker-alt"></i> Amman,Jordan</p>
             <p>2020 &copy; Company</p>
         </div>
     </div>
@@ -35,7 +34,7 @@ export default {
         flex: 1 1 0px;
         color: var(--font-color);
         h4{
-            border-bottom: 1px solid #f9813a;
+            border-bottom: 2px solid #f9813a;
         }
         .fas{
             color: #f9813a;

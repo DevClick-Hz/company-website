@@ -86,7 +86,7 @@
          remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
          and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
       </p>
-      <a href="#">Know more <i class="fas fa-arrow-right fa-xs"></i></a>
+      <router-link to="/about">Know more <i class="fas fa-arrow-right fa-xs"></i></router-link>
       </div>
     </div>
     </div>
@@ -237,7 +237,7 @@ p{
     .fab{
       color: #f9813a;
       cursor: pointer;
-      margin: 0 10px;
+      margin: 0 3px;
     }
     }
   }
