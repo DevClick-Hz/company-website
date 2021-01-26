@@ -92,6 +92,7 @@
     </div>
     <a href="#head" class="backTop"><i class="fas fa-arrow-up fa-2x"></i></a>
     <foot/>
+    <p class="backTop" @click="bkTop"><i class="fas fa-arrow-up fa-2x" ></i></p>
     </div>
 </template>
 
@@ -107,7 +108,23 @@ export default {
         { name: 'Jack Willson', jobTitle: 'CEO at X company', profile: require('../assets/CEO1.jpg') },
         { name: 'Hannah Billy', jobTitle: 'CEO at Y company', profile: require('../assets/CEO2.jpg') },
         { name: 'James Gary', jobTitle: 'CEO at Z company', profile: require('../assets/CEO3.jpg') }
-      ]
+      ],
+      offset: 500
+    }
+  },
+  methods:{
+    bkTop(){
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  },
+  mounted () {
+    const arrow = document.querySelector('.backTop')
+    window.onscroll = () => {
+      if (window.scrollY > this.offset) {
+        arrow.style.display = 'block'
+      } else {
+        arrow.style.display = 'none'
+      }
     }
   }
 }

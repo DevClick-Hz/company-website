@@ -3,27 +3,11 @@
      <transition name="fade" mode="out-in">
      <router-view/>
     </transition>
-    <a href="#head" class="backTop"><i class="fas fa-arrow-up fa-2x"></i></a>
   </div>
 </template>
 
 <script>
 export default {
-  data(){
-    return{
-    offset: 500
-    }
-  },
-  mounted () {
-    const arrow = document.querySelector('.backTop')
-    window.onscroll = () => {
-      if (window.scrollY > this.offset) {
-        arrow.style.display = 'block'
-      } else {
-        arrow.style.display = 'none'
-      }
-    }
-  }
 }
 </script>
 

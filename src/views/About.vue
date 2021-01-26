@@ -1,6 +1,6 @@
 <template>
  <div class="contain">
-    <router-link to="/"><i class="fas fa-long-arrow-alt-left fa-lg">Back</i></router-link>
+    <router-link to="/"><i class="fas fa-long-arrow-alt-left fa-lg">Home</i></router-link>
     <div class="about">
       <div class="itm text">
        <p><span class="first">A</span>bout us Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -41,7 +41,8 @@
           </div>
         </div>
         <p class="itm">
-          <i class="fas fa-quote-left"></i> Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          <i class="fas fa-quote-left"></i> 
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
             when an unknown printer took a galley of type and scrambled it to make a type specimen book.
              It has survived not only five centuries, but also the leap into electronic typesetting, 
@@ -79,8 +80,8 @@ mounted(){
     color: var(--font-color);
     .fa-long-arrow-alt-left{
             color: #f9813a;
-            position: absolute;
-            left: 50px;
+            position: fixed;
+            left: 20px;
         }
     .about{
       width: 85%;
@@ -130,13 +131,14 @@ mounted(){
         margin: 50px auto;
         .ceo{
           .pic{
-            width: 250px;
+            width: 200px;
             height: 200px;
             margin: 10px auto;
             
           img{
             height: 100%;
             width: 100%;
+            object-fit: cover;
             border-radius: 50%;
           }
           }

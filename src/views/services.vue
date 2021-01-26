@@ -1,6 +1,6 @@
 <template>
 <div class="contain">
-    <router-link to="/"><i class="fas fa-long-arrow-alt-left fa-lg">Back</i></router-link>
+    <router-link to="/"><i class="fas fa-long-arrow-alt-left fa-lg">Home</i></router-link>
     <h1>Our Services</h1>
     <div class="services-cont">
         <div :id="'serv'+index" class="service" v-for="(service,index) in services" :key="index">
@@ -46,8 +46,8 @@ export default {
     }
     .fa-long-arrow-alt-left{
             color: #f9813a;
-            position: absolute;
-            left: 50px;
+            position: fixed;
+            left: 20px;
         }
     .services-cont{
         width: 85%;
